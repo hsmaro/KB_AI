@@ -96,9 +96,9 @@ def show_predict_page():
         see_graph(user_db) # 그래프 출력
         with st.spinner('뉴스를 추천 중입니다...'): # 뉴스를 추천해주는 동안 떠 있을 문구
         
-            low_rec_label, high_rec_label, news_titles, news_contents = news_rec(os.path.join(data_path, "split_db_v6.csv"),
-                                                                os.path.join(data_path, "split_db_v6.csv"),
-                                                                os.path.join(data_path, "rating_v6.csv"),
+            low_rec_label, high_rec_label, news_titles, news_contents = news_rec(os.path.join(data_path, "split_db.csv"),
+                                                                os.path.join(data_path, "split_db.csv"),
+                                                                os.path.join(data_path, "rating.csv"),
                                                                 st.session_state.user_id)
             st.session_state.news_titles = news_titles
             st.session_state.news_contents = news_contents
