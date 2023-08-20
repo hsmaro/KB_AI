@@ -216,9 +216,9 @@ def model_valid(user_id_list, news_id_list, data_path, config):
 
     # 학습한 모델 load하기 
     my_model = FeedForwardEmbedNN(dataset.num_news,
-                       config["hidden_layers"], config["dropouts"], config["num_factors"], config["embedding_dropout"])#.to(device) 
+                       config["hidden_layers"], config["dropouts"], config["num_factors"], config["embedding_dropout"]).to("cpu") 
     # .to("cpu") - 배포시에만 사용
-    my_model.load_state_dict(torch.load("43_params2.data")) # map_location=torch.device('cpu') - 배포시에만 사용
+    my_model.load_state_dict(torch.load("43_params2.data", map_location=torch.device('cpu'))) # map_location=torch.device('cpu') - 배포시에만 사용
     prediction_outputs = my_model.predict(news=torch.LongTensor(processed_test_input_df.label.values),
                                         gender=torch.LongTensor(processed_test_input_df.gender.values),
                                         age=torch.LongTensor(processed_test_input_df.age.values),
