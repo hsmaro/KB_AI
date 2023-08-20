@@ -16,7 +16,7 @@ warnings.filterwarnings("ignore")
 
 
 def read_dataset(data_path):
-    df = pd.read_csv(os.path.join(data_path, "rating_v6.csv")) # "train.csv"
+    df = pd.read_csv(os.path.join(data_path, "rating.csv")) # "train.csv"
     train_df, val_df = train_test_split(df, test_size=0.2, random_state=29, shuffle=True)
     return train_df, val_df
 
