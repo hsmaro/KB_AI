@@ -48,7 +48,7 @@ def update_user_db(label, ox, idx, user_path, data_path):
     split_user_db = user_db.iloc[:, 0:18]
     
     user_db.to_csv(user_path, encoding="utf-8", index=False) ## 나중에 바꾸기
-    split_user_db.to_csv(os.path.join(data_path, "split_db_v6.csv"), encoding="utf-8", index=False)
+    split_user_db.to_csv(os.path.join(data_path, "split_db.csv"), encoding="utf-8", index=False)
     return user_db
 
 # 카테고리별로 기사가 추천되었을 때 사용
@@ -66,7 +66,7 @@ def update_select_db(low_rec_label, high_rec_label, idx, user_path, data_path):
 
     # 저장
     user_db.to_csv(user_path, encoding="utf-8", index=False)
-    split_user_db.to_csv(os.path.join(data_path, "split_db_v6.csv"), encoding="utf-8", index=False)
+    split_user_db.to_csv(os.path.join(data_path, "split_db.csv"), encoding="utf-8", index=False)
 
 ## 기사를 눌럿을 때 사용
 def update_click_rate(idx, label, user_path, data_path, news_idx, click_list):
@@ -88,7 +88,7 @@ def update_click_rate(idx, label, user_path, data_path, news_idx, click_list):
 
     # 저장
     user_db.to_csv(user_path, encoding="utf-8", index=False)
-    split_user_db.to_csv(os.path.join(data_path, "split_db_v6.csv"), encoding="utf-8", index=False)
+    split_user_db.to_csv(os.path.join(data_path, "split_db.csv"), encoding="utf-8", index=False)
 
 
 def see_graph(user_db):
