@@ -39,8 +39,7 @@ def update_user_db(label, ox, idx, user_path, data_path):
     user_db.loc[idx, label] = user_db.loc[idx, f"{label}_ans"] / user_db.loc[idx, f"{label}_tot"] # 정답률 업데이트
     
     # 정답률 펑균 업데이트 및 클릭율 업데이트  or "금융":"경제일반"
-    #user_db.loc[idx, "acc_avg"] = user_db.loc[idx, 금융":"경제일반].sum() / 6
-    # ?
+    user_db.loc[idx, "acc_avg"] = user_db.loc[idx, "금융":"경제/정책"].sum() / 6
         
     selected_user = user_db[user_db["user_id"]==st.session_state.user_id] # 해당 user의 행만 추출
     st.session_state.selected_user = selected_user
