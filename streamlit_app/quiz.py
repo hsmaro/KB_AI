@@ -6,7 +6,7 @@ import textwrap
 
 ## pick question
 def qa():
-    quiz = pd.read_csv("./data/e_ox_v4.csv") # 문제 데이터 # 문답 데이터 호출
+    quiz = pd.read_csv("./data/e_ox.csv") # 문제 데이터 # 문답 데이터 호출
     
     ## 문제 선택
     quiz_id = random.randint(0, quiz.shape[0]-1) # 0부터 해당 열의 갯수만큼 중 랜덤
