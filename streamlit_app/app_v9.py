@@ -11,7 +11,7 @@ from news import news_rec, rec_list
 
 # define path
 data_path = os.path.join(os.getcwd(), "data")
-user_path = os.path.join(data_path, "user_db_v6.csv")
+user_path = os.path.join(data_path, "user_db.csv")
 
 ## show_predict_page
 def show_predict_page():
@@ -32,7 +32,7 @@ def show_predict_page():
             pass        
         with col2:
             start_image = st.empty()
-            start_image.image('./data/img/start_logo_v2.png')
+            start_image.image('./data/img/start_logo.png')
             time.sleep(2) # 잠시 대기
             start_image.empty()
         with col3:
