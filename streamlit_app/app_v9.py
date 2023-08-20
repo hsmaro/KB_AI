@@ -32,7 +32,8 @@ def show_predict_page():
             pass        
         with col2:
             start_image = st.empty()
-            start_image.image('./data/img/start_logo.png')
+            img_url = os.path.join(os.getcwd(), "data", "img", "start_logo.png")
+            start_image.image(img_url)
             time.sleep(2) # 잠시 대기
             start_image.empty()
         with col3:
