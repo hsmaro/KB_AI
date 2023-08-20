@@ -9,7 +9,7 @@ from models.neural_collaborative_filtering_v3 import model_valid
 ## news_rec - 기사추천
 def news_rec(input_csv_path, user_csv_path, output_csv_path, id):
     # Preprocess user information and save to a CSV file
-    news = pd.read_csv("./data/news_db_v7.csv") # news 데이터
+    news = pd.read_csv("./data/news_db.csv") # news 데이터
     processor = UserLabelProcessor(input_csv_path, user_csv_path, output_csv_path)
     processor.melt_and_save()
     
