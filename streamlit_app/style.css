@@ -1,0 +1,42 @@
+/*header style*/
+
+header.css-uc1cuc.ezrtsby2 {
+    background-color: #eee6c4; /*#ffcc04*/
+}
+/*
+header.css-1sk1gzj.ezrtsby2 {
+    font-size: 16px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    text-size-adjust: 100%;
+    -webkit-tap-highlight-color: #60544c;
+    -webkit-font-smoothing: auto;
+    color: rgb(0, 0, 0);
+    box-sizing: border-box;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 2.875rem;
+    background: #eee6c4;
+    outline: none;
+    z-index: 999990;
+    display: block;
+}
+*/
+
+/*check & info*/
+@media (max-width: 640px) {
+    .css-keje6w {
+        min-width: calc(50% - 1rem);
+        }
+}
+/*#60544c*/
+/*div.css-keje6w.e1f1d6gn1{
+
+}
+@media (max-width: 640px)
+.css-keje6w {
+    min-width: calc(50% - 1.5rem);
+}
